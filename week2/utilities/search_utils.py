@@ -80,6 +80,8 @@ def evaluate_test_set(test_data, prior_clicks_df, opensearch, xgb_model_name, lt
 
         ltr_simple_query_obj = lu.create_rescore_ltr_query(key, simple_query_obj, click_prior_query, xgb_model_name, ltr_store, rescore_size=rescore_size,
                                                            main_query_weight=main_query_weight, rescore_query_weight=rescore_query_weight)
+        #print(json.dumps(ltr_simple_query_obj))
+        #print()
         __judge_hits(test_skus_for_query, index, key, no_ltr_simple, opensearch, ltr_simple_query_obj, "ltr_simple", results, seen)
         ltr_hand_query_obj = lu.create_rescore_ltr_query(key, hand_tuned_query_obj, click_prior_query, xgb_model_name, ltr_store,
                                                          rescore_size=rescore_size, main_query_weight=main_query_weight, rescore_query_weight=rescore_query_weight)
@@ -346,7 +348,7 @@ def lookup_query(query, all_clicks_df, opensearch, explain=False, index="bbuy_pr
                         print("Explain query %s" % query_obj)
                         response = opensearch.explain(index, sku, body=query_obj)
                         print(json.dumps(response, indent=4))
-                    
-                
+
+
         else:
             print("No clicks for query %s" % query)
