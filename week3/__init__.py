@@ -9,7 +9,7 @@ from pathlib import Path
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
-    
+
     if test_config is None:
         # load the instance config, if it exists, when not testing
         app.config.from_envvar('LTR_APPLICATION_SETTINGS', silent=True)
@@ -24,9 +24,13 @@ def create_app(test_config=None):
             print("No prior clicks to load.  This may effect quality. Run ltr-end-to-end.sh per week 2 if you want")
         #print(app.config)
         SYNS_MODEL_LOC = os.environ.get("SYNONYMS_MODEL_LOC", "/workspace/datasets/fasttext/syns_model.bin")
+        SYNS_THRESHOLD = os.environ.get("SYNONYMS_THRESHOLD", 0.90)
         print("SYNS_MODEL_LOC: %s" % SYNS_MODEL_LOC)
+        print("SYNS_THRESHOLD: %s" % SYNS_THRESHOLD)
+
         if SYNS_MODEL_LOC and os.path.isfile(SYNS_MODEL_LOC):
             app.config["syns_model"] = fasttext.load_model(SYNS_MODEL_LOC)
+            app.config["syns_threshold"] = SYNS_THRESHOLD
         else:
             print("No synonym model found.  Have you run fasttext?")
         app.config["index_name"] = os.environ.get("INDEX_NAME", "bbuy_annotations")

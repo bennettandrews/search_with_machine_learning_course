@@ -1,12 +1,13 @@
 import argparse
 import os
+import re
 import random
+import string
 import xml.etree.ElementTree as ET
 from pathlib import Path
-
-def transform_name(product_name):
-    # IMPLEMENT
-    return product_name
+from collections import defaultdict
+from nltk import word_tokenize
+from nltk.stem import SnowballStemmer
 
 # Directory for product data
 directory = r'/workspace/search_with_machine_learning_course/data/pruned_products/'
@@ -35,8 +36,22 @@ if args.input:
 min_products = args.min_products
 sample_rate = args.sample_rate
 
+
+stemmer = SnowballStemmer("english")
+STRIP_RE="®|™"
+
+def strip(str):
+    table = str.maketrans("", "", string.punctuation)
+    return re.sub(STRIP_RE, "", str.translate(table))
+
+def transform_name(product_name):
+    tokens = word_tokenize(strip(product_name))
+    product_name = " ".join([stemmer.stem(t) for t in tokens])
+    return product_name
+
 print("Writing results to %s" % output_file)
 with open(output_file, 'w') as output:
+    results = defaultdict(list)
     for filename in os.listdir(directory):
         if filename.endswith(".xml"):
             print("Processing %s" % filename)
@@ -54,5 +69,9 @@ with open(output_file, 'w') as output:
                       cat = child.find('categoryPath')[len(child.find('categoryPath')) - 1][0].text
                       # Replace newline chars with spaces so fastText doesn't complain
                       name = child.find('name').text.replace('\n', ' ')
-                      output.write("__label__%s %s\n" % (cat, transform_name(name)))
+                      results[cat].append(transform_name(name))
 
+    for cat, names in results.items():
+        if len(names) > min_products:
+            for name in names:
+                output.write("__label__%s %s\n" % (cat, transform_name(name)))

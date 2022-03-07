@@ -18,6 +18,7 @@ def annotate():
         response = {}
         cat_model = current_app.config.get("cat_model", None) # see if we have a category model
         syns_model = current_app.config.get("syns_model", None) # see if we have a synonyms/analogies model
+        syns_threshold = current_app.config.get("syns_threshold", None)
         # We have a map of fields to annotate.  Do POS, NER on each of them
         sku = the_doc["sku"]
         for item in the_doc:
@@ -25,6 +26,7 @@ def annotate():
             if the_text is not None and the_text.find("%{") == -1:
                 if item == "name":
                     if syns_model is not None:
-                        print("IMPLEMENT ME: call nearest_neighbors on your syn model and return it as `name_synonyms`")
+                        syns = syns_model.get_nearest_neighbors(the_text)
+                        response["name_synonyms"] = [syn for score,syn in syns if score > syns_threshold]
         return jsonify(response)
     abort(415)
