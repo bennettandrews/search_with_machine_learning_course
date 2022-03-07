@@ -1,0 +1,239 @@
+> case
+ipod 0.970172
+purpl 0.954399
+pink 0.946474
+nano 0.9434
+4s 0.932932
+skullcandi 0.931123
+charg 0.929291
+jacket 0.928823
+iphon 0.926849
+earbud 0.917234
+
+>phone
+att 0.947953
+mobil 0.946319
+answer 0.933372
+system 0.929097
+motorola 0.927087
+htc 0.918436
+dect 0.90643
+expand 0.9025
+expans 0.886837
+analog 0.886482
+
+>laptop
+processor 0.987187
+vaio 0.987037
+centrino 0.986561
+duo 0.985351
+atom 0.98219
+pentium 0.981522
+i3 0.980083
+mini 0.976863
+intel 0.976771
+allinon 0.976623
+
+>charger
+charg 0.974119
+otterbox 0.96993
+headphon 0.969705
+earbud 0.963657
+4s 0.958334
+skullcandi 0.958098
+nano 0.954796
+griffin 0.953679
+4thgener 0.95163
+skin 0.949264
+
+>headset
+head 0.99029
+dock 0.976771
+boombox 0.972903
+otterbox 0.970018
+zagg 0.96806
+set 0.965105
+bluetooth 0.964801
+pocket 0.964763
+clear 0.961841
+clock 0.961618
+
+>motorola
+htc 0.978511
+unlock 0.970385
+otterbox 0.961159
+model 0.960336
+mobil 0.959859
+analog 0.959733
+cell 0.957521
+4g 0.956598
+bluetooth 0.956542
+headset 0.949836
+
+>samsung
+sharp 0.961671
+60hz 0.940277
+22 0.936957
+120hz 0.936803
+720p 0.932722
+philip 0.932059
+40 0.931879
+55 0.929742
+1080p 0.929625
+ledlcd 0.929405
+
+>blackberry
+blackberri 0.996969
+protect 0.935652
+blacksilv 0.934054
+htc 0.933037
+otterbox 0.928102
+headphon 0.924636
+microphon 0.923858
+4g 0.916637
+clear 0.915239
+angel 0.91275
+
+>otterbox
+headphon 0.988094
+skullcandi 0.979228
+charg 0.976413
+dock 0.975763
+htc 0.973662
+model 0.972663
+earbud 0.972156
+incas 0.970337
+headset 0.970018
+charger 0.96993
+
+>apple
+appl 0.998419
+ipad 0.984974
+4thgener 0.984524
+generat 0.974648
+iphon 0.973211
+4s 0.966533
+incas 0.961932
+shell 0.961244
+folio 0.954195
+tribeca 0.953288
+
+>iphone
+phone 0.952224
+iphon 0.941585
+motorola 0.920695
+mobil 0.914743
+htc 0.912935
+headphon 0.907488
+charger 0.896894
+cell 0.896057
+4s 0.895569
+ipod 0.892723
+
+>vortex
+adapt 0.98936
+innov 0.985617
+parti 0.979986
+softwar 0.978106
+univers 0.970882
+optic 0.970364
+media 0.968648
+netgear 0.965696
+activ 0.965154
+4port 0.963667
+
+>axim
+univers 0.973818
+optic 0.970043
+adapt 0.966259
+giant 0.965239
+texa 0.960367
+modul 0.959823
+13 0.959768
+parti 0.95871
+innov 0.957833
+softwar 0.957166
+
+>droid
+16 0.981206
+17 0.977526
+35 0.968463
+profession 0.966617
+microwav 0.953102
+coffe 0.948731
+pearl 0.946693
+steel 0.94663
+coffeemak 0.945922
+overtherang 0.945694
+
+>n86
+upright 0.120774
+light 0.115118
+right 0.114987
+home 0.10297
+hepa 0.10103
+berklin 0.100684
+straight 0.100395
+dirt 0.0992113
+vacuum 0.0989081
+game 0.096769
+
+>black
+seri 0.918957
+blacksilv 0.907455
+blackgray 0.886606
+blackberri 0.854163
+orang 0.85313
+s 0.83895
+microphon 0.836637
+protect 0.823973
+micro 0.819987
+blackonblack 0.816686
+
+>white
+galleri 0.980527
+whiteonwhit 0.979679
+whirlpool 0.973285
+kitchenaid 0.973022
+architect 0.9715
+steel 0.970649
+profil 0.970339
+overtherang 0.968308
+blackonblack 0.967991
+microwav 0.967669
+
+>wireless
+wirelessn 0.975262
+netgear 0.921136
+wire 0.916542
+network 0.909621
+mous 0.904675
+adapt 0.903374
+ethernet 0.898893
+parti 0.894788
+networkreadi 0.893539
+laserjet 0.89272
+
+>silicon
+glove 0.971689
+11 0.958227
+person 0.957296
+on 0.948932
+blacksilv 0.943588
+3pack 0.942973
+targus 0.941324
+cool 0.938407
+secur 0.937239
+action 0.936657
+
+>teal
+medium 0.979121
+by 0.973128
+drum 0.972521
+edit 0.968727
+boston 0.967637
+schedul 0.965032
+trademark 0.964448
+metal 0.964282
+chicago 0.963569
+wallet 0.962452

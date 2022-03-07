@@ -1,0 +1,20 @@
+case
+phone
+laptop
+charger
+headset
+motorola
+samsung
+blackberry
+otterbox
+apple
+iphone
+lg vortex
+dell axim
+motorola droid
+nokia n86
+black
+white
+wireless
+silicon
+teal
